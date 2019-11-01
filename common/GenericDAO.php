@@ -5,6 +5,9 @@
     abstract class GenericDAO {
         protected abstract function getTableName();
         
+        protected abstract function bindUpdateParams ($stmt);
+
+
         private $conn;
         private $logger;
         
@@ -61,6 +64,31 @@
                 $this->logger->getLogger()->warn("0 or more then one records retrieved for id={$pKey}");
             }
         }
+        
+        public function update_by_id ($id){
+            $sql = "update {$this->getTableName()} set ";
+            $updates = array();
+		
+            foreach ($this->columns as $column) {
+                if ($column != 'id') {
+                    $updates[] = "{$column}=?";
+                }
+            }
+		
+            $sql .= implode(',', $updates);
+            $sql .= " where id={$id};";
+            
+            $this->logger->getLogger()->debug("Updating record sql=" . $sql);
+            $stmt = mysqli_prepare($this->conn->getConnection(), $sql);
+                     
+            $this->bindUpdateParams($stmt);
+            
+            mysqli_stmt_execute($stmt);
+            
+            
+    
+	}
+        
     }
 
 ?>

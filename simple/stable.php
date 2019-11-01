@@ -31,6 +31,7 @@
 					<tr>
 						<th>ID</th>
 						<th>SUMMARY</th>
+                                                <th>DESCRIPTION</th>
 						<th>IS READ</th>
 						<th></th>
 						</tr>';
@@ -39,6 +40,7 @@
 					echo '<td><a href="../form/postedit.php?id=' . $row['id'] . '">' . $row['id'] .  '</a>'.
                                                     "</td>"; 
 					echo "<td>" . $row['summary'] . "</td>";
+                                        echo "<td>" . $row['description'] . "</td>";
 					echo "<td>" . $row['is_read'] . "</td>";
 					echo "<td>" . generate_form($row['id']) . "</td>";					
 					echo "</tr>"; 
