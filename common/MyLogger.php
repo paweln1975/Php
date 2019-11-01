@@ -1,15 +1,15 @@
 <?php
-	include ("./log4php/Logger.php");
-	Logger::configure('logger.xml');
+	require_once ("Logger.php");
+	Logger::configure($_SERVER['DOCUMENT_ROOT'] . "/common/logger.xml");
 	abstract class MyLogger {
 		private $logger;
 		private $rustart;
-		
-		public abstract function getName();
-		
-		public function __construct() {
+	
+                public abstract function getName();
+
+                public function __construct() {
 			//$this->logger = Logger::getLogger(get_class($this));
-			$this->logger = Logger::getLogger($this->getName());
+                        $this->logger = Logger::getLogger($this->getName());
 			$rustart = getrusage();
 		}
     

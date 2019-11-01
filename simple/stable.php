@@ -9,7 +9,7 @@
 		<?php
 		
 			function generate_form ($p_id) {
-				$form = '<form action="zadanie2.php" method="post">
+				$form = '<form action="sedit.php" method="post">
 					<input type="hidden" name="op" value="edit" />
 					<input type="hidden" name="id" value="'.$p_id.'" />
 					<input type="submit" value="Edit" />
