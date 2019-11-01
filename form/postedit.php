@@ -32,7 +32,7 @@
             </p>
             <p>
             <label>Read:</label><br>
-            <input name="is_read" type="text" value="<?php echo $me->getValue("is_read") ?>"/><br>
+            <input name="is_read" type="text" value="<?php echo $me->getValue("is_read"); ?>"/><br>
             </p>
         </form>
     </body>
