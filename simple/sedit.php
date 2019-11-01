@@ -61,6 +61,6 @@
 			mysqli_close($baza);
 		?>
 		
-		<a href=zadanie1.php>Powrót</a>
+                <a href=stable.php>Powrót</a>
 	</body>
 </html>
