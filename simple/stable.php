@@ -36,7 +36,8 @@
 						</tr>';
 				while($row = mysqli_fetch_array($wynik)) {
 					echo "<tr>";
-					echo "<td>" . $row['id'] . "</td>"; 
+					echo '<td><a href="../form/postedit.php?id=' . $row['id'] . '">' . $row['id'] .  '</a>'.
+                                                    "</td>"; 
 					echo "<td>" . $row['summary'] . "</td>";
 					echo "<td>" . $row['is_read'] . "</td>";
 					echo "<td>" . generate_form($row['id']) . "</td>";					
