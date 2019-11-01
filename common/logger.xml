@@ -1,0 +1,12 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="appLogAppender" class="LoggerAppenderFile">
+        <param name="file" value="../logs/app.log" />
+		<layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{Y-m-d H:i:s,u} [%level][%logger] %message%newline" />
+        </layout>
+    </appender>
+	<root>
+        <level value="debug" />
+        <appender_ref ref="appLogAppender" />
+    </root>
+</configuration>
