@@ -6,6 +6,10 @@
 </head>
 	<body>
 		<p>Zadanie 1 - wyświetlenie zawartości tabeli</p>
+                <p>
+                    <a class="buttonlink" href="../form/postedit.php">Add new</a>
+                </p>
+                <p>
 		<?php
 		
 			function generate_form ($p_id) {
@@ -23,8 +27,6 @@
 			if (mysqli_connect_errno()) {
 				echo "Wystąpił błąd połączenia z bazą.<br>";
 			} else {
-				echo "Podłączenie do bazy danych ok<br>";
-				
 				$wynik = mysqli_query($baza,"SELECT * FROM post_item;");
 				
 				echo '<table class="tableex">
@@ -51,5 +53,6 @@
 			
 			mysqli_close($baza);
 		?>
+                </p>
 	</body>
 </html>
