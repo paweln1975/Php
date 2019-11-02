@@ -2,15 +2,28 @@
 
 <html>
 <head>
-    <link rel="stylesheet" href="../common/styles.css">
-  <script language="javascript" type="text/javascript">
-			function doReload(no_of_records){
-				document.location = 'zadanie4.php?pageno=1&no_of_records=' + no_of_records;
-}
-		</script>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>PHP school</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <script language="javascript" type="text/javascript">
+	function doReload(no_of_records){
+            document.location = 'zadanie4.php?pageno=1&no_of_records=' + no_of_records;
+        }
+    </script>
 </head>
 	<body>
-	
+	<?php
+        include_once '../BSNav.php';
+        $nav = new BSNav("pag");
+        $nav->generate_navigation();
+        ?>
 		<p>Zadanie 4 - paginacja dla tabeli</p>
 		<?php
 			require_once '../common/MyLogger.php';
