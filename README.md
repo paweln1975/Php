@@ -9,9 +9,13 @@ Training of php for Ola
    programs are installed:
    
    Apache server version: Apache/2.4.41
+
    MySQL (version 8.0.18 or above)
+
    PHP (version 7.3 or above)
-   Bootstrap (version 4.3.1) 
+
+   Bootstrap (version 4.3.1)
+ 
    apache-log4php-2.3.0
    
 2. Extract the apache-log4php-2.3.0 / zipfile to a dir. 
