@@ -41,11 +41,12 @@
             <div class="card">
                 <div class="card-header">JS</div>
                 <div class="card-body">
-                    <h5 class="card-title">TODO elements for Java Script</h5>
+                    <h5 class="card-title">TODO elements for Java/Java Script</h5>
                     <ul class="list-group">
                         <li class="list-group-item">Basics from w3schools</li>
                         <li class="list-group-item">AJAX</li>
                         <li class="list-group-item">jQuery</li>
+                        <li class="list-group-item">Selenium tests</li>
                     </ul>
                 </div>
             </div>
@@ -70,7 +71,7 @@
                         
                             <li class="list-group-item">Add to pagination page</li>
                             <li class="list-group-item">Use Pagination</li>
-                            <li class="list-group-item">Formular</li>
+                            <li class="list-group-item list-group-item-info">Formular</li>
                             <li class="list-group-item">Check if jQuery is needed and move to offline</li>
                             <li class="list-group-item">Grid</li>
                             <li class="list-group-item">Alerts - success and error handling</li>
