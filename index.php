@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>PHP school</title>
+    <title>PHP School</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -50,17 +50,30 @@
                     </ul>
                 </div>
             </div>
-            <ul class="list-group">
-                <li class="list-group-item">Example</li>
-                <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
-                <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
-                <li class="list-group-item list-group-item-success">A simple success list group item</li>
-                <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
-                <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
-                <li class="list-group-item list-group-item-info">A simple info list group item</li>
-                <li class="list-group-item list-group-item-light">A simple light list group item</li>
-                <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
-            </ul>
+            <p>
+            <div class="card">    
+            <div class="card card-body">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Colors example
+            </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                
+    
+                    <ul class="list-group">
+                        <li class="list-group-item">Example</li>
+                        <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+                        <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+                        <li class="list-group-item list-group-item-success">A simple success list group item</li>
+                        <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                        <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+                        <li class="list-group-item list-group-item-info">A simple info list group item</li>
+                        <li class="list-group-item list-group-item-light">A simple light list group item</li>
+                        <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
         </div>
         <div class="col-sm-6">
             <div class="card">
@@ -69,9 +82,9 @@
                     <h5 class="card-title">TODO elements for Bootstrap</h5>
                     <ul class="list-group">
                         
-                            <li class="list-group-item">Add to pagination page</li>
+                            <li class="list-group-item">Add to pagination/big table page - test small table</li>
                             <li class="list-group-item">Use Pagination</li>
-                            <li class="list-group-item list-group-item-info">Formular</li>
+                            <li class="list-group-item list-group-item-success">Formular</li>
                             <li class="list-group-item">Check if jQuery is needed and move to offline</li>
                             <li class="list-group-item">Grid</li>
                             <li class="list-group-item">Alerts - success and error handling</li>
@@ -90,9 +103,9 @@
                         <li class="list-group-item">Reference to dictionary</li>
                         <li class="list-group-item">Date picker</li>
                         <li class="list-group-item">Validations</li>
-                        <li class="list-group-item">Different types of fields</li>
-                        <li class="list-group-item">Use bootstrap button for submit form</li>
-                        
+                        <li class="list-group-item">Other types of fields</li>
+                        <li class="list-group-item list-group-item-success">Use bootstrap button for submit form</li>
+                        <li class="list-group-item">Confirmation after save/insert operation</li>
                     </ul>
                 </div>
             </div>
