@@ -34,7 +34,8 @@
                         <li class="list-group-item">Sorting</li>
                         <li class="list-group-item">Simple search</li>
                         <li class="list-group-item">Basics from w3schools</li>
-                        
+                        <li class="list-group-item list-group-item-success">Starting servers as Win services</li>
+                        <li class="list-group-item">Error handling - simple case: No MySQL db available</li>
                     </ul>
                 </div>
             </div>
