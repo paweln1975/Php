@@ -24,7 +24,7 @@
         $nav->generate_navigation();
         ?>
     
-		<p>Zadanie 3 - wyświetlenie dużej tabeli</p>
+		<p>Zadanie 4 - wyświetlenie dużej tabeli</p>
 		<?php
 				
 			$baza=mysqli_connect("localhost","ola","ola321","ola");
@@ -36,23 +36,25 @@
 				
 				$wynik = mysqli_query($baza,"SELECT * FROM big_table100;");
 				
-				echo '<table class="tableex"><tr><th>ID</th>';
+				echo '<table class="table table-sm table-bordered">';
+				echo '<thead class="thead-light"><tr><th scope="col">ID</th>';
+				for( $x = 1; $x <= 100; $x++ ) {
+                                    echo '<th scope="col">COL' . $x . '</th>';
+                                }
 				
-				for( $x = 1; $x <= 100; $x++ )
-					echo "<th>COL" . $x . "</th>";
-				
-				echo "</tr>";
-				
+				echo "</tr></thead>";
+				echo "<tbody>";
 				while($row = mysqli_fetch_array($wynik)) {
 					echo "<tr>";
-					echo "<td>" . $row['id'] . "</td>";
+					echo '<td class="text-nowrap">' . $row['id'] . '</td>';
 					
-					for( $x = 1; $x <= 100; $x++ )
-						echo "<td>" . $row['col' . $x] . "</td>";
+					for( $x = 1; $x <= 100; $x++ ) {
+                                            echo '<td class="text-nowrap">' . $row['col' . $x] . '</td>';
+                                        }
 										
-					echo "</tr>"; 
+					echo '</tr>'; 
 				}
-				
+				echo "</tbody>";
 				echo "</table>";
 			}
 			

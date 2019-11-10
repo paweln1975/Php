@@ -22,6 +22,7 @@
                 $nav->generate_navigation();
     ?>    
         
+    <p>Zadanie 3 - formualarz edycji / usuwania rekordu</p>
         
         <?php
             require_once '../common/GenericDAO.php';

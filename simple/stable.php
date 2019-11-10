@@ -10,7 +10,7 @@
 
     <!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <!--link rel="stylesheet" href="../common/styles.css"-->
+    
 </head>
 	<body>
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -22,7 +22,7 @@
                 $nav = new BSNav("stable");
                 $nav->generate_navigation();
             ?>
-		<p>Wyświetlenie zawartości tabeli</p>
+		<p>Zadanie 1 - Wyświetlenie zawartości tabeli</p>
                 <ul class="nav nav-pills">
                     <li class="nav-item">
                         <a class="nav-link active" href="../form/postedit.php">Add new</a>

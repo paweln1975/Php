@@ -14,7 +14,7 @@
 
     <script language="javascript" type="text/javascript">
 	function doReload(no_of_records){
-            document.location = 'zadanie4.php?pageno=1&no_of_records=' + no_of_records;
+            document.location = 'pag.php?pageno=1&no_of_records=' + no_of_records;
         }
     </script>
 </head>
@@ -28,7 +28,10 @@
         $nav = new BSNav("pag");
         $nav->generate_navigation();
         ?>
-		<p>Zadanie 4 - paginacja dla tabeli</p>
+            <p>Zadanie 5 - paginacja dla tabeli</p>
+                
+            <div class="container-fluid">
+                <div style="overflow-y: auto;">
 		<?php
 			require_once '../common/MyLogger.php';
                         
@@ -75,23 +78,25 @@
 				
 				$result = mysqli_query($conn,$sql);
 				
-				echo '<table class="tableex"><tr><th>ID</th>';
+				echo '<table class="table table-sm table-bordered">';
+				echo '<thead class="thead-light"><tr><th scope="col">ID</th>';
+				for( $x = 1; $x <= 20; $x++ ) {
+                                    echo '<th scope="col">COL' . $x . '</th>';
+                                }
 				
-				for( $x = 1; $x <= 100; $x++ )
-					echo "<th>COL" . $x . "</th>";
-				
-				echo "</tr>";
-				
+				echo "</tr></thead>";
+				echo "<tbody>";
 				while($row = mysqli_fetch_array($result)) {
 					echo "<tr>";
-					echo "<td>" . $row['id'] . "</td>";
+					echo '<td class="text-nowrap">' . $row['id'] . '</td>';
 					
-					for( $x = 1; $x <= 100; $x++ )
-						echo "<td>" . $row['col' . $x] . "</td>";
+					for( $x = 1; $x <= 20; $x++ ) {
+                                            echo '<td class="text-nowrap">' . $row['col' . $x] . '</td>';
+                                        }
 										
-					echo "</tr>"; 
+					echo '</tr>'; 
 				}
-				
+				echo "</tbody>";
 				echo "</table>";
 			}
 			
@@ -99,25 +104,33 @@
 			
 			$me->logTime();
 		?>
-		
-		<form>
-			<label for="no_of_records">Ilość rekordów na stronie</label>
-			<select name="no_of_records" onchange="doReload(this.value);">
+                </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-2">
+                        <form class="form-inline">
+                            <label for="no_of_records">Show&nbsp;</label>
+			<select class="form-control form-control-sm" name="no_of_records" onchange="doReload(this.value);">
 				<option value="10" <?php if ($no_of_records == 10) echo "selected"; ?>>10</option>
 				<option value="50" <?php if ($no_of_records == 50) echo "selected"; ?>>50</option>
 				<option value="100" <?php if ($no_of_records == 100) echo "selected"; ?>>100</option>
 			</select>
-		</form>
-		
-		
-		<div class="center">
-			<div class="pagination">
-				<a href="?pageno=1<?php echo "&no_of_records=" .$no_of_records;?>">First</a>
-				<a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1) . "&no_of_records=" .$no_of_records; } ?>">Prev</a>
-				<a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1) . "&no_of_records=" .$no_of_records;; } ?>">Next</a>
-				<a href="?pageno=<?php echo $total_pages . "&no_of_records=" .$no_of_records;; ?>">Last</a>
-			</div>
-		</div>
+                        <label>&nbsp;records</label>
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-md-10">
+                        <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item <?php if($pageno <= 1){ echo 'disabled';} ?>"><a class="page-link" href="?pageno=1<?php echo "&no_of_records=" .$no_of_records;?>">First</a></li>
+                                    <li class="page-item <?php if($pageno <= 1){ echo 'disabled';} ?>"><a class="page-link" href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1) . "&no_of_records=" .$no_of_records; } ?>">Prev</a></li>
+                                    <li class="page-item <?php if($pageno >= $total_pages){ echo 'disabled';} ?>"><a class="page-link" href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1) . "&no_of_records=" .$no_of_records;; } ?>">Next</a></li>
+                                    <li class="page-item <?php if($pageno >= $total_pages){ echo 'disabled';} ?>"><a class="page-link" href="?pageno=<?php echo $total_pages . "&no_of_records=" .$no_of_records;; ?>">Last</a></li>
+                                </ul>
+                        </nav>
+                    </div>
+                </div>
+                
 
 		
 		
