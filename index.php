@@ -30,11 +30,11 @@
                 <div class="card-body">
                     <h5 class="card-title">TODO elements for PHP</h5>
                     <ul class="list-group">
-                        <li class="list-group-item">Generic table class</li>
+                        <li class="list-group-item list-group-item-success">Starting servers as Win services</li>
                         <li class="list-group-item">Sorting</li>
                         <li class="list-group-item">Simple search</li>
+                        <li class="list-group-item">Generic table class</li>
                         <li class="list-group-item">Basics from w3schools</li>
-                        <li class="list-group-item list-group-item-success">Starting servers as Win services</li>
                         <li class="list-group-item">Error handling - simple case: No MySQL db available</li>
                     </ul>
                 </div>
@@ -82,15 +82,13 @@
                 <div class="card-body">
                     <h5 class="card-title">TODO elements for Bootstrap</h5>
                     <ul class="list-group">
-                        
-                            <li class="list-group-item">Add to pagination/big table page - test small table</li>
-                            <li class="list-group-item">Use Pagination</li>
+                            <li class="list-group-item list-group-item-success">Add to pagination/big table page - test small table</li>
+                            <li class="list-group-item list-group-item-success">Use Pagination</li>
                             <li class="list-group-item list-group-item-success">Formular</li>
+                            <li class="list-group-item list-group-item-success">Grid</li>
                             <li class="list-group-item">Check if jQuery is needed and move to offline</li>
-                            <li class="list-group-item">Grid</li>
                             <li class="list-group-item">Alerts - success and error handling</li>
                             <li class="list-group-item">Modal dialog - remove confirmation</li>
-                        
                     </ul>
                 </div>
             </div>
@@ -99,14 +97,13 @@
                 <div class="card-body">
                     <h5 class="card-title">TODO elements for forms</h5>
                     <ul class="list-group">
-                        
+                        <li class="list-group-item list-group-item-success">Use bootstrap button for submit form</li>
                         <li class="list-group-item">Allowable values</li>
+                        <li class="list-group-item">Confirmation after save/insert operation</li>
                         <li class="list-group-item">Reference to dictionary</li>
                         <li class="list-group-item">Date picker</li>
                         <li class="list-group-item">Validations</li>
                         <li class="list-group-item">Other types of fields</li>
-                        <li class="list-group-item list-group-item-success">Use bootstrap button for submit form</li>
-                        <li class="list-group-item">Confirmation after save/insert operation</li>
                     </ul>
                 </div>
             </div>
